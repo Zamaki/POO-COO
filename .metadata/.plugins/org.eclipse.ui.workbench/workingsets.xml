@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1567663629818_0" label="Java Main Sources" name="main">
+<item elementID="=Td1/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Design Patterns exercices/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=TD Observer/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=TD Refactoring initial-code/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=TDGuitar-code-to-complete/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Tdm-DP-small-exercices/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Tdm-SOLID-bad-version/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Tdm-SOLID-small-exercices/src" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1567663629835_1" label="Java Test Sources" name="test"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1567663651698_2" label="Window Working Set" name="Aggregate for window 1567663651698"/>
+</workingSetManager>

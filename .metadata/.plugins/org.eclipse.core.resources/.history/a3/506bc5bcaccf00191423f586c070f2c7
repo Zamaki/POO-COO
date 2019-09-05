@@ -1,0 +1,56 @@
+package exo1;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Inventory {
+  private List<Guitar> guitars;
+
+  public Inventory() {
+    guitars = new LinkedList<>();
+  }
+
+  public void addGuitar(String serialNumber, double price,
+                        String builder, String model,
+                        String type, String backWood, String topWood) {
+	  guitars.add(new Guitar(serialNumber,price,builder,model,type,backWood,topWood));
+  }
+  
+  public Guitar getGuitar(String serialNumber) {
+    for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
+      Guitar guitar = i.next();
+      //TODO
+      if (guitar.getSerialNumber().equals(serialNumber)) {
+    	  return guitar;
+      }
+      
+    }
+    return null;
+  }
+  
+  public Guitar search(Guitar searchGuitar) {
+    for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
+      Guitar guitar = i.next();
+      // Ignore serial number since that's unique
+      // Ignore price since that's unique
+      System.out.println("Builder : "+guitar.getBuilder()+" = "+searchGuitar.getBuilder());
+      System.out.println("Model : "+guitar.getModel()+" = "+searchGuitar.getModel());
+      System.out.println("Type : "+guitar.getType()+" = "+searchGuitar.getType());
+      System.out.println("BackWood : "+guitar.getBackWood()+" = "+searchGuitar.getBackWood());
+      System.out.println("TopWood : "+guitar.getTopWood()+" = "+searchGuitar.getTopWood());
+      System.out.println();
+      
+      if(guitar.getBuilder().equalsIgnoreCase(searchGuitar.getBuilder())
+    		  && guitar.getModel().equalsIgnoreCase(searchGuitar.getModel())
+    		  && guitar.getType().equalsIgnoreCase(searchGuitar.getType())
+    		  && guitar.getBackWood().equalsIgnoreCase(searchGuitar.getBackWood())
+    		  && guitar.getTopWood().equalsIgnoreCase(searchGuitar.getTopWood())) {
+    	  return guitar;
+      }
+      
+    }
+    return null;
+  }
+  
+}

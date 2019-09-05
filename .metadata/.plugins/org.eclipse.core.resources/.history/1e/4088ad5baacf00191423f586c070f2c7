@@ -1,0 +1,65 @@
+package exo1;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Inventory {
+  private List<Guitar> guitars;
+
+  public Inventory() {
+    guitars = new LinkedList<>();
+  }
+
+  public void addGuitar(String serialNumber, double price,
+                        String builder, String model,
+                        String type, String backWood, String topWood) {
+	  guitars.add(new Guitar(serialNumber,price,builder,model,type,backWood,topWood));
+  }
+  
+  public Guitar getGuitar(String serialNumber) {
+    for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
+      Guitar guitar = i.next();
+      //TODO
+      if (guitar.getSerialNumber().equals(serialNumber)) {
+    	  return guitar;
+      }
+      
+    }
+    return null;
+  }
+  
+  public Guitar search(Guitar searchGuitar) {
+    for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
+      Guitar guitar = i.next();
+      // Ignore serial number since that's unique
+      // Ignore price since that's unique
+      System.out.println("Builder : "+searchGuitar.getBuilder());
+      System.out.println("Model : "+searchGuitar.getModel());
+      System.out.println("Type : "+searchGuitar.getType());
+      System.out.println("BackWood : "+searchGuitar.getBackWood());
+      System.out.println("TopWood : "+searchGuitar.getTopWood());
+      
+      if(guitar.getBuilder().equals(searchGuitar.getBuilder())
+    		  && guitar.getModel().equals(searchGuitar.getModel())
+    		  && guitar.getType().equals(searchGuitar.getType())
+    		  && guitar.getBackWood().equals(searchGuitar.getBackWood())
+    		  && guitar.getTopWood().equals(searchGuitar.getTopWood())) {
+    	  return guitar;
+      }
+      
+      
+      //String builder = searchGuitar.getBuilder();
+      //if ((builder != null) && (!builder.equals("")) &&
+          //(!builder.equals(guitar.getBuilder())))
+        //continue;
+      //String model = searchGuitar.getModel();
+      //TODO
+      
+      
+    //TODO return 
+    }
+    return null;
+  }
+  
+}
